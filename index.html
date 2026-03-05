@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -6,12 +6,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
 		<script src="scripts.js" defer></script>
-		<title>OdinProject | Etch-a-Sketch</title>
+		<script
+			src="https://kit.fontawesome.com/1e723eb9a7.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<title>Etch-a-Sketch</title>
 	</head>
 	<body>
-		<h1>Etch-a-Sketch</h1>
-		<button id="new-grid">New Grid</button>
+		<header>
+			<h1>Etch-a-Sketch <i class="fa-solid fa-paintbrush"></i></h1>
+		</header>
 
-		<div class="container"></div>
+		<main>
+			<section id="controls">
+				<h2>Controls</h2>
+				<input type="color" id="color-picker" value="#ffffff" />
+				<button id="solid-btn">Solid Mode</button>
+				<button id="rainbow-btn">Rainbow Mode</button>
+				<button id="eraser-btn">
+					Eraser <i class="fa-solid fa-eraser"></i>
+				</button>
+				<button id="clear-btn">Clear</button>
+				<p id="grid-size">16 x 16</p>
+				<input
+					type="range"
+					id="grid-range"
+					min="1"
+					max="64"
+					value="16"
+				/>
+				<button id="new-grid-btn">
+					New Grid <i class="fa-solid fa-border-all"></i>
+				</button>
+			</section>
+
+			<section id="canvas">
+				<h2>Canvas</h2>
+				<div id="grid"></div>
+			</section>
+		</main>
+
+		<footer>
+			<p></p>
+		</footer>
 	</body>
 </html>
